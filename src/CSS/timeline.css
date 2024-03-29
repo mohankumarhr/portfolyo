@@ -1,0 +1,105 @@
+.timeline-section{
+    padding: 50px 10%;
+}
+
+.timeline-section>h2{
+    text-align: center;
+    color: white;
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+}
+
+.timeline-wrapper{
+    padding-top: 50px;
+    display: flex;
+    gap: 10%;
+}
+.timeline-container{
+    flex-basis: 50%;
+    text-align: justify;
+}
+
+.timeline-container>h3{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.timeline{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+}
+
+.timeline-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeline-header .expandicon{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.company{
+    color: white;
+    font-size: 25px;
+}
+
+.data-loc p{
+    color: white;
+}
+
+.data-loc{
+    display: flex;
+    gap: 10px;
+}
+
+.position{
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position>p{
+    color: white;
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+}
+.summary{
+    color: #eaeaea;
+    line-height: 1.5;
+}
+
+.position-desc{
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.desc-points{
+    color: #eaeaea;
+    margin-top: 15px;
+}
+
+.timeline-details{
+    /* visibility: hidden; */
+    /* position: absolute; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+   
+}
+.timeline-details.open{
+    max-height: 700px;
+}
+
+@media (max-width: 900px){
+    .timeline-wrapper{
+        flex-direction: column;
+        gap: 50px;
+    }
+}

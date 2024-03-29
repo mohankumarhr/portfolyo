@@ -1,0 +1,82 @@
+.services-section{
+    padding: 50px 5%;
+    overflow: hidden;
+   
+}
+
+.services-section h2{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.service{
+    display: flex;
+    padding: 50px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.service-info{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+}
+
+.service-info h3{
+    color: white;
+    font-size: 70px;
+    font-weight: 100;
+    transition: all 0.5s ease;
+}
+
+
+/* @keyframes glow {
+    from {
+      text-shadow: none;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  } */
+
+.service:hover h3{
+    transform: scale(1.05);
+}
+
+.service-info p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+
+.service-img{
+    position: relative;
+}
+
+.service-img-wrapper{
+    position: absolute;
+    top: -10px;
+    right: -600px;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-img .price{
+    color: white;
+}
+
+.service:hover .service-img-wrapper{
+    right: -200px;
+}
+
+.services-section img{
+    width: 150px;
+}
+
+@media (max-width: 900px){
+    .service-info h3{
+        font-size: 50px;
+    }
+}

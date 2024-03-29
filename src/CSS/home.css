@@ -1,0 +1,396 @@
+.home-conatainer{
+    position: relative;
+    color: white;
+    padding-top: 50px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    
+}
+
+
+.area{
+    background: hsl(0, 0%, 7%);  
+    /* background: -webkit-linear-gradient(to left, hsla(0, 0%, 7%, 0.125), hsl(0, 0%, 7%));   */
+    width: 100%;
+    height:90vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+
+/* ************************************ */
+
+@keyframes scribble {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  div#stripped {
+    max-width: 750px;
+    height: 100%;
+    margin: 0 auto;
+    background: #000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 0;
+    overflow: hidden;
+    border-radius: 200px;
+  }
+  div#stripped svg {
+    background: #000;
+    mix-blend-mode: darken;
+    height: inherit;
+    width: inherit;
+  }
+  
+  div#stripped svg polyline {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 400;
+    stroke-dasharray: 20000;
+    stroke-dashoffset: 20000;
+    animation: scribble 3s linear forwards;
+  }
+  @media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+    div#stripped {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/olga-2x.jpg);
+    }
+  }
+
+/* ***************************************** */
+
+
+.context{
+    display: flex;
+    justify-content: space-between;
+}
+.info-section{
+    position: relative;
+}
+
+.info-section h1{
+    font-size: 8rem;
+}
+
+.info-section h2{
+    font-size: 5rem;
+}
+
+.image-section{
+    margin-right: 50px;
+    width: 350px;
+    height: 500px;
+}
+.image-section img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ******************************************** */
+
+.info-container{
+   padding: 50px 0 0 50px;
+}
+
+.info-container h1 {
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+/* @media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    h1 {
+        font-size: 72px;
+    }
+} */
+
+.effect-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.effect-block span {
+    opacity: 0;
+    animation: text-visible 0.0001s linear forwards;
+    animation-delay: 1.5s;
+}
+
+.effect-block:after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: white;
+    animation: effect-block 2s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-delay: 1s;
+}
+
+#another {
+    top: 30px;
+    font-size: 5rem;
+}
+
+@media only screen and (min-width: 992px) {
+    #another {
+        left: 100px;
+    }
+}
+
+#another span {
+    animation-delay: 2s;
+}
+
+#another.effect-block:after {
+    background: white;
+    animation-delay: 1.4s;
+}
+
+@keyframes effect-block {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+    50% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 0%;
+    }
+}
+
+@keyframes text-visible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* ************************************************ */
+
+.skill-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0px 0px 120px;
+    width: 60vw;
+}
+
+.skill-section>p{
+    font-size: 25px;
+    line-height: 1.5;
+    padding-right: 10px;
+    border-right: 3px solid white;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.skills .skill-img-cont{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.skills img{
+    width: 50%;
+}
+.skills p{
+    text-align: center;
+}
+.skill-container{
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; */
+    padding-left: 10px;
+    width: 100%;
+    gap: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+@media (max-width: 900px){
+    .image-section{
+        display: none;
+    }
+    .info-section h1{
+        font-size: 4.5rem;
+    }
+    #another{
+        font-size: 3.5rem;
+    }
+    .info-container{
+        padding: 31px 0 0 41px;
+    }
+
+    .skill-section{
+        width: 100%;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+    }
+    .skill-section>p{
+        display: none;
+    }
+}
